@@ -1,6 +1,36 @@
 export const projectsData = [
   {
     id: 1,
+    title: "HelpDeskAgent - Gestión multi-tenant de helpdesk",
+    description:
+      "Aplicación web multi-tenant para gestionar tiendas y sucursales, diagnósticos de red, proyectos y flujos de trabajo tipo kanban. Combina Laravel en el backend con React e Inertia en el frontend para ofrecer una experiencia de una sola página sin perder las rutas y controladores de Laravel.",
+    stack: ["Laravel", "PHP", "React.js", "Inertia.js", "TypeScript"],
+    repo: "https://github.com/JhonatanMinos/HelpDeskAgent",
+  },
+  {
+    id: 2,
+    title: "LobWallet - Billetera digital con tarjeta y promociones",
+    description:
+      "Aplicación de billetera digital para consultar saldo, mostrar una tarjeta digital con código de barras, sincronizar movimientos, encontrar tiendas en el mapa y consultar promociones. Construida con Laravel, Inertia, React, TypeScript y NativePHP Mobile.",
+    stack: [
+      "Laravel",
+      "React.js",
+      "TypeScript",
+      "Inertia.js",
+      "NativePHP Mobile",
+    ],
+    repo: "https://github.com/JhonatanMinos/LobWallet",
+  },
+  {
+    id: 3,
+    title: "CoffeeFlow - Enfoque, proyectos y progreso personal",
+    description:
+      "Aplicación que combina sesiones de enfoque, gestión de proyectos y progreso personal para equipos de software. Usa Laravel 13, React 19, TypeScript e Inertia.js, con espacios de trabajo personales y de equipo, roles, invitaciones y tableros Kanban aislados por espacio.",
+    stack: ["Laravel", "React.js", "TypeScript", "Inertia.js"],
+    repo: "https://github.com/JhonatanMinos/CoffeFlow",
+  },
+  {
+    id: 4,
     title: "LumenFlow - Sistema de Gestión de Filas para Eventos",
     description:
       "LumenFlow es una aplicación web especializada diseñada para optimizar y controlar el flujo de personas en eventos, proporcionando una solución digital para la gestión eficiente de filas y orden de atención. El sistema permite una mejor organización y reduce los tiempos de espera, mejorando significativamente la experiencia de los asistentes a eventos.",
@@ -60,7 +90,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 5,
     title: "PayLink - Sistema de Gestión de Solicitudes de Pago",
     description:
       "PayLink es una aplicación web empresarial diseñada para automatizar y optimizar el proceso de solicitudes y gestión de pagos en un entorno dental corporativo. El sistema facilita la comunicación entre departamentos, el seguimiento de solicitudes y la gestión documental relacionada con pagos a proveedores.",
@@ -127,7 +157,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 3,
+    id: 6,
     title: "MDC Dental - Sistema Integral de Gestión Dental",
     description:
       "Sistema de API integral diseñado para unificar y centralizar la gestión de múltiples plataformas dentales, con enfoque en el control y administración de usuarios. El sistema resuelve la complejidad de manejar diferentes interfaces y sistemas aislados en el contexto de servicios dentales, proporcionando una solución centralizada y eficiente.",

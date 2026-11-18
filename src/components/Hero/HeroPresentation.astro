@@ -1,0 +1,184 @@
+---
+import { Image } from "astro:assets";
+import imgJ from "../../assets/jhonatan.png";
+import ButtonTheme from "../Buttons/ButtonTheme.astro";
+import { email, githubUrl, linkedinUrl } from "../../data/site.js";
+
+const techStack = [
+  "Laravel",
+  "React",
+  "TypeScript",
+  "Inertia.js",
+  "MySQL",
+  "PHP",
+  "Tailwind CSS",
+];
+
+// One source of truth for button shape, spacing and focus. Congruence comes
+// from these tokens, not from remembering to copy the same classes by hand.
+// Padding lives in the variants so an icon button never fights a text button
+// over px-4 vs px-2.5 (Tailwind resolves conflicts by CSS order, not by the
+// order you write the classes).
+const btnBase =
+  "inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900";
+const btnPrimary = `${btnBase} px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 dark:hover:bg-blue-500`;
+const btnSecondary = `${btnBase} px-4 py-2 border border-gray-400 text-gray-800 hover:bg-gray-100 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800`;
+const btnIcon = `${btnBase} p-2.5 border border-gray-400 text-gray-800 hover:bg-gray-100 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800`;
+---
+
+<div>
+  <header
+    data-hero-header
+    inert
+    class="fixed top-0 left-0 z-50 w-full bg-gray-400 dark:bg-gray-900 text-white py-2 px-4 flex justify-between items-center gap-4 transition-opacity duration-500 ease-in-out opacity-0"
+  >
+    <a href="#top" class="flex items-center min-w-0" aria-label="Back to top">
+      <Image
+        src={imgJ}
+        alt=""
+        width={40}
+        height={40}
+        class="w-10 h-10 rounded-full object-cover border-2 border-gray-800 dark:border-gray-200 shrink-0"
+      />
+      <span class="ml-2 text-lg font-bold hidden sm:inline">Jhonatan Navarro</span>
+    </a>
+
+    <nav class="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm" aria-label="Sections">
+      <a href="#experience" class="hover:underline">Experience</a>
+      <a href="#projects" class="hover:underline">Projects</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+      <ButtonTheme />
+    </nav>
+  </header>
+
+  <div data-hero-body class="transition-opacity duration-500 ease-in-out">
+    <div class="flex justify-end mt-4">
+      <ButtonTheme />
+    </div>
+    <div class="flex flex-col items-center md:flex-row">
+      <Image
+        src={imgJ}
+        alt="Jhonatan Navarro"
+        width={416}
+        height={416}
+        loading="eager"
+        fetchpriority="high"
+        class="w-52 h-52 rounded-full object-cover border-4 border-gray-800 dark:border-gray-200 mb-4 md:mr-4 md:mb-0"
+      />
+      <div class="text-center md:text-left text-gray-800 dark:text-white">
+        <h1 class="text-4xl font-bold">Jhonatan Navarro</h1>
+        <p class="text-lg">
+          Full Stack Developer with 4+ years of experience. I build scalable
+          applications end to end — Laravel backends, React interfaces — turning
+          complex requirements into reliable products with clean architecture.
+        </p>
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-4">
+          <a
+            href={`${import.meta.env.BASE_URL}JhonatanNavarro.pdf`}
+            download="JhonatanNavarro.pdf"
+            class={btnPrimary}
+          >
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M16 2L21 7V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918C3 2.44405 3.44495 2 3.9934 2H16ZM12 11.5C13.3807 11.5 14.5 10.3807 14.5 9C14.5 7.61929 13.3807 6.5 12 6.5C10.6193 6.5 9.5 7.61929 9.5 9C9.5 10.3807 10.6193 11.5 12 11.5ZM7.52746 17H16.4725C16.2238 14.75 14.3163 13 12 13C9.68372 13 7.77619 14.75 7.52746 17Z"
+              ></path>
+            </svg>
+            CV
+          </a>
+          <a href={`mailto:${email}`} class={btnSecondary}>
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+              ></path>
+            </svg>
+            Get in touch
+          </a>
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            class={btnIcon}
+          >
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 256 256"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            class={btnIcon}
+          >
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <ul
+      class="flex flex-wrap justify-center gap-2 mt-6 list-none p-0"
+      aria-label="Core technologies"
+    >
+      {
+        techStack.map((tech) => (
+          <li class="rounded-full border border-gray-300 bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:text-blue-900 hover:shadow-md hover:shadow-blue-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-blue-500 dark:hover:bg-blue-900/40 dark:hover:text-blue-200">
+            {tech}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  const header = document.querySelector("[data-hero-header]");
+  const body = document.querySelector("[data-hero-body]");
+
+  if (header && body) {
+    let isPast = null;
+
+    const apply = (past) => {
+      if (past === isPast) return;
+      isPast = past;
+      header.classList.toggle("opacity-0", !past);
+      body.classList.toggle("opacity-0", past);
+      // `inert` saca el bloque del orden de tabulación y de los clicks:
+      // con opacity-0 solo, queda una copia invisible pero clickeable.
+      header.inert = !past;
+      body.inert = past;
+    };
+
+    apply(window.scrollY > 100);
+    window.addEventListener("scroll", () => apply(window.scrollY > 100), {
+      passive: true,
+    });
+  }
+</script>

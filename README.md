@@ -5,17 +5,17 @@ Computer Engineering graduate from the Universidad de Guadalajara.
 
 I build scalable internal tools and web applications using modern technologies, with a focus on clean architecture and great developer experience.
 
-🔗 **Live portfolio:** [jhonatanminos.github.io/JhonatanNavarro](https://jhonatanminos.github.io/JhonatanNavarro/)
+🔗 **Live portfolio:** [jhonatanminos.github.io](https://jhonatanminos.github.io/)
 
 ---
 
 ## 🗂️ Sections
 
-- **About** — Who I am and what I do
-- **Skills** — Technologies and tools I work with
-- **Projects** — Things I've built
+- **Hero** — Who I am and what I do
 - **Experience** — My professional background
-- **Contact** — How to reach me
+- **My story** — A short summary of how I work
+- **Projects** — Things I've built
+- **Email** — How to reach me
 
 ---
 
@@ -23,9 +23,11 @@ I build scalable internal tools and web applications using modern technologies, 
 
 | Technology | Purpose |
 |---|---|
-| [React](https://react.dev/) | UI library |
-| [Vite](https://vitejs.dev/) | Build tool & dev server |
+| [Astro](https://astro.build/) | Static site framework |
 | [Tailwind CSS](https://tailwindcss.com/) | Styling |
+| [Bun](https://bun.sh/) | Package manager & script runner |
+
+The site ships **zero JavaScript frameworks**: every page is static HTML, and the only client-side scripts are a few hundred bytes for the theme toggle, the scroll header, the project dialogs and the copy-email button.
 
 ---
 
@@ -46,27 +48,37 @@ I build scalable internal tools and web applications using modern technologies, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/JhonatanMinos/JhonatanNavarro.git
+git clone git@github.com:JhonatanMinos/JhonatanMinos.github.io.git
 
 # Navigate into the project
-cd JhonatanNavarro
+cd JhonatanMinos.github.io
 
 # Install dependencies
-npm install
+bun install
 
 # Start the dev server
-npm run dev
+bun run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:4321](http://localhost:4321) in your browser.
+
+---
+
+## 📦 Deployment
+
+The site is published to GitHub Pages from the `dist` folder:
+
+```bash
+bun run deploy
+```
 
 ---
 
 ## 📬 Contact
 
-- **LinkedIn:** [linkedin.com/in/jhonatan-navarro](https://www.linkedin.com/in/jhonatan-navarro)
+- **LinkedIn:** [jhonatan-miguel-angel-navarro-mejia](https://mx.linkedin.com/in/jhonatan-miguel-angel-navarro-mejia-356800188)
 - **GitHub:** [@JhonatanMinos](https://github.com/JhonatanMinos)
-- **Email:** your@email.com
+- **Email:** jhonatanmanm@gmail.com
 
 ---
 

@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroPresentation from "../components/Hero/HeroPresentation.astro";
+import MyTimeline from "../components/timeLine/MyTimeline.astro";
+import ProjectsSection from "../components/Projects/ProjectsSection.astro";
+import InputEmail from "../components/Email/InputEmail.astro";
+---
+
+<Layout>
+  <div id="top" class="container mx-auto lg:w-1/2 sm:w-3/4 px-4">
+    <HeroPresentation />
+
+    <div id="experience" class="flex items-center mt-8 scroll-mt-20">
+      <svg
+        class="w-12 h-12 text-gray-800 dark:text-white"
+        viewBox="0 0 16 16"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"
+        ></path>
+        <path
+          d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"
+        ></path>
+      </svg>
+      <h2 class="text-3xl font-bold mb-0 ml-2 text-gray-800 dark:text-white">
+        Experience
+      </h2>
+    </div>
+
+    <div class="mt-8">
+      <MyTimeline />
+    </div>
+
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+        My story as a developer
+      </h2>
+      <div
+        class="rounded-xl border border-gray-200 dark:border-gray-700 p-6 max-w-prose"
+      >
+        <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+          As a Web Developer with 4 years of hands-on experience, I build dynamic
+          and scalable applications using PHP, HTML, CSS, and JavaScript.
+        </p>
+        <p class="mt-4 text-gray-700 dark:text-gray-200 leading-relaxed">
+          Over the last year, I’ve deepened my expertise in React.js and Laravel,
+          delivering solutions that improve efficiency and user experience. I’m
+          driven by continuous learning and motivated to join teams that value
+          innovation, collaboration, and growth.
+        </p>
+      </div>
+    </section>
+
+    <ProjectsSection />
+    <InputEmail />
+  </div>
+</Layout>
