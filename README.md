@@ -72,6 +72,31 @@ The site is published to GitHub Pages from the `dist` folder:
 bun run deploy
 ```
 
+> The deploy passes `--nojekyll` to `gh-pages` on purpose. Without that flag the
+> CLI skips dotfiles, `.nojekyll` never reaches the published branch, and Jekyll
+> then drops the `_astro/` directory, leaving every asset with a 404.
+
+---
+
+## 📄 Updating the CV
+
+The downloadable CV lives at `public/JhonatanNavarro.pdf` and is served from the
+site root: <https://jhonatanminos.github.io/JhonatanNavarro.pdf>.
+
+Overwrite that file **keeping the same name** and no code changes are needed.
+Then commit and publish:
+
+```bash
+git add public/JhonatanNavarro.pdf
+git commit -m "chore: update CV"
+git push origin main
+bun run deploy
+```
+
+If the file name changes, update both `href` and `download` in
+`src/components/Hero/HeroPresentation.astro`. Changing only `href` downloads the
+new file under the old name.
+
 ---
 
 ## 📬 Contact
