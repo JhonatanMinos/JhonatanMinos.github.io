@@ -1,0 +1,7 @@
+# https://jhonatanminos.github.io/robots.txt
+# Personal portfolio. Single page, no private or authenticated areas.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://jhonatanminos.github.io/sitemap-index.xml
