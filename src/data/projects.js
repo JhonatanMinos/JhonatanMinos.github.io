@@ -6,6 +6,7 @@ export const projectsData = [
       "Aplicación web multi-tenant para gestionar tiendas y sucursales, diagnósticos de red, proyectos y flujos de trabajo tipo kanban. Combina Laravel en el backend con React e Inertia en el frontend para ofrecer una experiencia de una sola página sin perder las rutas y controladores de Laravel.",
     stack: ["Laravel", "PHP", "React.js", "Inertia.js", "TypeScript"],
     repo: "https://github.com/JhonatanMinos/HelpDeskAgent",
+    status: "in-progress",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const projectsData = [
       "NativePHP Mobile",
     ],
     repo: "https://github.com/JhonatanMinos/LobWallet",
+    status: "in-progress",
   },
   {
     id: 3,
