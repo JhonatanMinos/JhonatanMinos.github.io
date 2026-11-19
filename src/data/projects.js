@@ -28,6 +28,7 @@ export const projectsData = [
       "Aplicación que combina sesiones de enfoque, gestión de proyectos y progreso personal para equipos de software. Usa Laravel 13, React 19, TypeScript e Inertia.js, con espacios de trabajo personales y de equipo, roles, invitaciones y tableros Kanban aislados por espacio.",
     stack: ["Laravel", "React.js", "TypeScript", "Inertia.js"],
     repo: "https://github.com/JhonatanMinos/CoffeFlow",
+    status: "in-progress",
   },
   {
     id: 4,
